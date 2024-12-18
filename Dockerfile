@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Expose the default Streamlit port
 EXPOSE 8501
 
-# Set the entry point for Streamlit
-ENTRYPOINT ["streamlit", "run"]
 
 # Command to run the Streamlit application
-CMD ["app.py", "--server.port", "8501", "--server.address", "0.0.0.0"]
+
+CMD ["streamlit", "run", "app.py", "--server.port", "$PORT", "--server.address", "0.0.0.0"]
+
