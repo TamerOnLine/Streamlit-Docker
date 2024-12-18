@@ -20,11 +20,5 @@ st.write(f"Your age is {age} years.")
 if st.button("Click here"):
     st.success("Button clicked successfully! 🎉")
 
-# Display dummy data
-st.subheader("Random Data:")
-data = pd.DataFrame(
-    np.random.randn(10, 3),
-    columns=["Column 1", "Column 2", "Column 3"]
-)
-st.table(data)
+
 
