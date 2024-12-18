@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Install required Python libraries from requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --no-warn-script-location -r requirements.txt
 
 # Expose the default Streamlit port
 EXPOSE 8501
