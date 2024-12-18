@@ -11,10 +11,8 @@ COPY . /app
 RUN pip install --no-cache-dir --no-warn-script-location -r requirements.txt
 
 # Expose the default Streamlit port
-EXPOSE 8501
-
+ENV PORT 8501
 
 # Command to run the Streamlit application
-
 CMD ["streamlit", "run", "app.py", "--server.port", "$PORT", "--server.address", "0.0.0.0"]
 
